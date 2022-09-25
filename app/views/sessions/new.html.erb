@@ -1,0 +1,30 @@
+
+<div class="row ">
+
+    <div class="col-md-8 panel-body">
+        <div class="form-group">
+            <%= form_for :user,url: new_session_path, html: {class: 'form-horizontal'} do |f| %>
+
+                <%= f.label :email,"email address" , class: "col-md-4 control-label"%>
+                <div class="col-md-8">
+                    <%= f.email_field :email, class: "form-control " %>
+                </div>
+
+                <%= f.label :password_digest,"password address" , class: "col-md-4 control-label"%>
+                <div class="col-md-8">
+                    <%= f.password_field :password_digest, class: "form-control " %>
+                </div>
+
+                </br>
+                <div class="form-group col-md-8  align-items-center">
+                    <button type="submit" class="btn btn-primary">sign in</button>
+                </div>
+            
+            <% end %>
+        </div>
+    </div>
+    <div class="col-4 form-group ">
+        
+    </div>
+</div>
+
