@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
-  skip_before_action :onlySingnIn
+  #skip_before_action :onlySingnIn
 
   def index
     @tasks = Task.all
