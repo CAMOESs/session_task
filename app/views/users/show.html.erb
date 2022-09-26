@@ -1,22 +1,22 @@
-<h1>Account details page</h1>
+<h1>アカウント詳細ページ</h1>
 
 <table class="table">
   <tbody>
     <tr>
-      <th scope="col">Name : </th>
+      <th scope="col">名前 : </th>
       <td scope="col"><%= @user.name %></td>
       <th></th>
     </tr>
   
     <tr>
-      <th>Email address : </th>
+      <th>メールアドレス : </th>
       <td><%= @user.email %></td>
       <td></td>
     </tr>
 
     <tr>
-      <td colspan="2" class="col-6"><a href="<%= profil_path %>" class="btn btn-success"> Edit</a>
-         <a href="<%= new_session_path %>" data-confirm="sure!" data-method="delete" class="btn btn-danger"> Delete</a></td>
+      <td colspan="2" class="col-6"><a href="<%= profil_path %>" class="btn btn-success">編集</a>
+         <a href="<%= new_session_path %>" data-confirm="sure!" data-method="delete" class="btn btn-danger">削除</a></td>
       
     </tr>
    
