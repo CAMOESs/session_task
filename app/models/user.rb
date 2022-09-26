@@ -8,6 +8,6 @@ class User < ApplicationRecord
         format:{with:/\A[^@\s]+@([^@.\s]+\.)+[^@.\s]+\z/},
         uniqueness: {case_sensitive: false}
 
-    validates_length_of :password, minimum: 6, message: 'please enter at least 6 characters'
+    validates_length_of :password_digest, minimum: 6, message: 'please enter at least 6 characters'
 
 end
