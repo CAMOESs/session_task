@@ -27,7 +27,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to tasks_path, success: 'タスクを更新しました'
+      redirect_to tasks_path, success: '「タスクを登録しました」'
     else
       render :edit
     end
