@@ -16,7 +16,7 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <% if userSingnIn %>
-    <a class="navbar-brand" href="<%= root_path %>" id="tasks-index">タスク一覧 </a>
+    <a class="navbar-brand tasks-index" href="<%= tasks_path %>" id="tasks-index">タスク一覧 </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,19 +24,19 @@
       
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="<%= new_task_path %>" id="new-task">タスクを登録する <span class="sr-only">(current)</span></a>
+          <a class="nav-link new-task" href="<%= new_task_path %>" id="new-task">タスクを登録する <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%= show_path %>" id="my-account">アカウント</a>
+          <a class="nav-link my-account" href="<%= show_path %>" id="my-account">アカウント</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="<%= destroy_session_path %>" id="sign-out">ログアウト</a>
+          <a class="nav-link sign-out" href="<%= destroy_session_path %>" id="sign-out">ログアウト</a>
         </li>
       </ul>
       <% else %>
       <form class="form-inline mt-2 mt-md-0">
-        <a class="nav-link " href="<%= new_user_path %>" id="sign-up">アカウント登録 </a>
-        <a class="nav-link " href="<%= new_session_path %>" id="sign-in">ログイン</a>
+        <a class="nav-link sign-up" href="<%= new_user_path %>" id="sign-up">アカウント登録 </a>
+        <a class="nav-link sign-in" href="<%= new_session_path %>" id="sign-in">ログイン</a>
       </form>
       <% end %>
     </div>
