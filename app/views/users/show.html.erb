@@ -15,7 +15,7 @@
     </tr>
 
     <tr>
-      <td colspan="2" class="col-6"><a href="<%= profil_path %>" id="edit-user" class="btn btn-success edit-user">編集</a>
+      <td colspan="2" class="col-6"><a href="<%= edit_user_path(@user.id) %>" id="edit-user" class="btn btn-success edit-user">編集</a>
          <a href="<%= new_session_path %>" data-confirm="本当に削除してもよろしいですか？" data-method="delete" id="destroy-user" class="btn btn-danger destroy-user">削除</a></td>
       
     </tr>
