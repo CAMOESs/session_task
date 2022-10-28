@@ -16,15 +16,12 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <% if userSingnIn %>
-    <a class="tasks-index" class="navbar-brand " href="<%= tasks_path %>" id="tasks-index">タスク一覧 </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand tasks-index" href="<%= tasks_path %>" id="tasks-index">タスク一覧 </a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a  class="new-task" class="nav-link " href="<%= new_task_path %>" id="new-task">タスクを登録する <span class="sr-only">(current)</span></a>
+          <a class="nav-link new-task" href="<%= new_task_path %>" id="new-task">タスクを登録する <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link my-account" href="<%= show_path %>" id="my-account">アカウント</a>
