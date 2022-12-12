@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'tasks#index'
+  #root to:"/"
   #get '/users/edit', to: 'users#edit', as: :profil
   #get '/profil', to: 'users#show', as: :show_profil
   patch '/users/edit', to: 'users#update'
