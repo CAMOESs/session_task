@@ -29,7 +29,7 @@ class UsersController < ApplicationController
         @user = currentUser
         user_params = params.require(:user).permit(:name, :email, :password_digest, :password_confirmation)
         if @user.update(user_params)
-            redirect_to profil_path, success: "modification éffectuée"
+            redirect_to  user_path(:id), success: "modification éffectuée"
         else
             render :edit
         end
