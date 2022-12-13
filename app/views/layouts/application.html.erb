@@ -16,24 +16,24 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <% if userSingnIn %>
-    <a id="tasks-index"  href="<%= tasks_path %>" >タスク一覧 </a>
+    <a id="tasks-index" class="navbar-brand" href="<%= tasks_path %>" >タスク一覧 </a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a id="new-task"  href="<%= new_task_path %>" >タスクを登録する <span class="sr-only">(current)</span></a>
+          <a id="new-task" class="nav-link" href="<%= new_task_path %>" >タスクを登録する <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a id="my-account"  href="<%= user_path(:id) %>" >アカウント</a>
+          <a id="my-account" class="nav-link" href="<%= user_path(:id) %>" >アカウント</a>
         </li>
         <li class="nav-item">
-          <a id="sign-out"  href="<%= destroy_session_path %>" >ログアウト</a>
+          <a id="sign-out" class="nav-link" href="<%= destroy_session_path %>" >ログアウト</a>
         </li>
       </ul>
       <% else %>
       <form class="form-inline mt-2 mt-md-0">
-        <a id="sign-up" href="<%= new_user_path %>" >アカウント登録 </a>
-        <a id="sign-in"  href="<%= new_session_path %>" >ログイン</a>
+        <a id="sign-up" class="nav-link " href="<%= new_user_path %>" >アカウント登録 </a>
+        <a id="sign-in" class="nav-link" href="<%= new_session_path %>" >ログイン</a>
       </form>
       <% end %>
     </div>
