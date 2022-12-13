@@ -27,9 +27,8 @@
       </ul>
       <% else %>
       <form class="form-inline mt-2 mt-md-0">
-        <%= link_to "fygghf", @task %>
-        <a id="sign-up" class="nav-link " href="<%= new_user_path %>" >アカウント登録 </a>
-        <a id="sign-in" class="nav-link" href="<%= new_session_path %>" >ログイン</a>
+        <%= link_to "アカウント登録", new_user_path, id: "sign-up", class: "nav-link " %>
+        <%= link_to "ログイン", new_session_path, id: "sign-in", class: "nav-link " %>
       </form>
       <% end %>
     </div>
