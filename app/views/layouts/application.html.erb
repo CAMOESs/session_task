@@ -16,19 +16,19 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <% if userSingnIn %>
-    <%= link_to "タスク一覧", tasks_path, id:"tasks-index", class:"nav-link navbar-brand active "  %>
+    <%= link_to "タスク一覧", tasks_path, id:"tasks-index",class:"nav-link", class:"nav-link navbar-brand active "  %>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       
       <ul class="navbar-nav mr-auto">
         
-        <%= link_to "タスクを登録する", new_task_path, id:"new-task", class:" new-task nav-link active "  %>
-        <%= link_to "アカウント", user_path(:id), id: "my-account", class:"my-account nav-link"  %>
-        <%= link_to "ログアウト", destroy_session_path, id: "sign-out", class:"sign-out nav-link"  %>
+        <%= link_to "タスクを登録する", new_task_path, id:"new-task",class:" new-task", class:" new-task nav-link active "  %>
+        <%= link_to "アカウント", user_path(:id), id: "my-account",class:"my-account", class:"my-account nav-link"  %>
+        <%= link_to "ログアウト", destroy_session_path, id: "sign-out", class:"sign-out", class:"sign-out nav-link"  %>
       </ul>
       <% else %>
       <form class="form-inline mt-2 mt-md-0">
-        <%= link_to "アカウント登録", new_user_path, id:"sign-up", class:"sign-up nav-link form-inline mt-2 mt-md-0" %>
-        <%= link_to "ログイン", new_session_path, id:"sign-in", class:"sign-in nav-link form-inline mt-2 mt-md-0" %>
+        <%= link_to "アカウント登録", new_user_path, id:"sign-up",class:"sign-up", class:"sign-up nav-link form-inline mt-2 mt-md-0" %>
+        <%= link_to "ログイン", new_session_path, id:"sign-in",class:"sign-in", class:"sign-in nav-link form-inline mt-2 mt-md-0" %>
       </form>
       <% end %>
     </div>
