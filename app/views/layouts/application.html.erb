@@ -26,10 +26,8 @@
         <%= link_to "ログアウト", destroy_session_path, id: "sign-out", class: "nav-link"  %>
       </ul>
       <% else %>
-      <form class="form-inline mt-2 mt-md-0">
-        <%= link_to "アカウント登録", new_user_path, id: "sign-up", class: "nav-link " %>
-        <%= link_to "ログイン", new_session_path, id: "sign-in", class: "nav-link " %>
-      </form>
+        <%= link_to "アカウント登録", new_user_path, id: "sign-up", class: "nav-link form-inline mt-2 mt-md-0" %>
+        <%= link_to "ログイン", new_session_path, id: "sign-in", class: "nav-link form-inline mt-2 mt-md-0" %>
       <% end %>
     </div>
   </nav>
