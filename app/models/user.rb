@@ -9,5 +9,6 @@ class User < ApplicationRecord
         uniqueness: {case_sensitive: false}
 
     validates_length_of :password_digest, minimum: 6, message: 'please enter at least 6 characters'
+    has_many :tasks, dependent: :destroy
 
 end

@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   #skip_before_action :onlySingnIn
 
   def index
-    @tasks = Task.all
+    @tasks = User.find(currentUser.id).tasks.all
   end
 
   def new
@@ -12,6 +12,8 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+    @user = User.find(currentUser.id)
+    @task.user = @user
     if @task.save
       redirect_to tasks_path, success: "タスクを登録しました"
     else
