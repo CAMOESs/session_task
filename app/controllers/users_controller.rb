@@ -11,7 +11,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.valid?
-            @user.sav
+            @user.save
             session[:auth] = {id: @user.id}
             redirect_to '/', success: 'アカウントを登録しました'
             #render 'new'
